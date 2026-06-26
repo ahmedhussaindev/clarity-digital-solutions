@@ -1,0 +1,104 @@
+/* start globle feature */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+::selection {
+    background-color: var(--main-color);
+    color: var(--main-background-color);
+}
+
+:root {
+    --main-background-color: #FFF;
+    --sub-background-color: ;
+    --main-color: #ea580c;
+    --sub-color: #c2410c;
+    --light-color: #fb923c;
+}
+
+.main-linear-color {
+    background: linear-gradient(to bottom right,
+            var(--main-color),
+            var(--sub-color));
+}
+
+.sub-linear-color {
+    background: linear-gradient(to bottom right,
+            var(--light-color),
+            var(--main-color));
+}
+
+/* end globle feature */
+
+
+/* start Navbar */
+
+/* end Navbar */
+
+
+/* start hero section */
+
+/* end hero section */
+
+
+/* start  Our Services */
+
+/* end  Our Services */
+
+
+/* start Technology Stack */
+
+/* end Technology Stack */
+
+
+/* start  Client Testimonials */
+
+/* end  Client Testimonials */
+
+
+/* start FAQ */
+
+/* end FAQ */
+
+
+/* start contact us */
+
+/* end contact us */
+
+
+/* start footer */
+
+/* end footer */
+
+
+/* media */
+
+/* xs */
+@media screen and (max-width:576px) {}
+
+/* sm */
+@media screen and (min-width:576px) {}
+
+/* md */
+@media screen and (min-width:768px) {}
+
+/* lg */
+@media screen and (min-width:992px) {}
+
+/* xl */
+@media screen and (min-width:1200px) {}
+
+/* xxl */
+@media screen and (min-width:1400px) {}
