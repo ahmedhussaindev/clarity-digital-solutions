@@ -71,6 +71,19 @@ body {
             var(--main-color));
 }
 
+.sub-linear-back-color-reverse {
+    background: linear-gradient(to bottom right,
+            var(--main-color),
+            var(--light-color));
+}
+
+.light-linear-back-color {
+    background: linear-gradient(to bottom right,
+            var(--main-color),
+            var(--sub-color),
+            var(--light-color));
+}
+
 .fs-xs {
     font-size: var(--fs-xs);
 }
@@ -396,6 +409,65 @@ header {
 
 /* start  Our Services */
 
+.section-header {
+    margin-bottom: 80px;
+}
+
+.our-services {
+    padding-block: 96px;
+}
+
+.our-services-p {
+    max-width: 760px;
+    margin: auto;
+    color: var(--mid-gray);
+}
+
+.services-card {
+    border: 1px solid var(--main-border-color);
+}
+
+.services-icon {
+    width: 56px;
+    height: 56px;
+    color: var(--main-background-color);
+    transition: 0.3s;
+}
+
+.services-header {
+    color: var(--dark-main-color);
+}
+
+.services-p {
+    color: var(--mid-gray);
+}
+
+.sol-list {
+    color: var(--mid-gray);
+}
+
+.sol-list i,
+.learn-more {
+    color: var(--main-color);
+}
+
+.services-card:hover {
+    transform: translateY(-10px);
+}
+
+.services-card:hover .services-icon {
+    transform: scale(1.1);
+}
+
+.learn-more span {
+    transition: 0.3s;
+}
+
+.services-card:hover .learn-more span {
+    margin-right: 12px !important;
+}
+
+
 /* end  Our Services */
 
 
@@ -524,6 +596,11 @@ header {
     .code-icon {
         width: 96px;
         height: 96px;
+    }
+
+    .services-icon {
+        width: 64px;
+        height: 64px;
     }
 }
 
