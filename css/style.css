@@ -32,6 +32,8 @@ body {
     --light-bg: #fff7ed;
     --light-orange-color: #FCEADC;
     --dark-main-color: #7c2d12;
+    --yellow-color: #FDC700;
+    --orange-border: #FBDDCC;
 
     /* font size  */
     --fs-xs: 12px;
@@ -297,7 +299,6 @@ header {
 
 .hero {
     padding: 110px 0px 64px;
-    background-color: orange;
     background: linear-gradient(to bottom right,
             var(--light-bg),
             var(--main-background-color),
@@ -473,15 +474,420 @@ header {
 
 /* start Technology Stack */
 
+
+.technology-stack {
+    padding-block: 84px;
+}
+
+.technology-carousel .carousel-indicators {
+    position: static;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.technology-carousel .carousel-indicators [data-bs-target] {
+    all: unset;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    color: var(--gray-color);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.technology-carousel .carousel-indicators [data-bs-target]:hover,
+.technology-carousel .carousel-indicators .active {
+    color: var(--main-color);
+}
+
+.technology-carousel .carousel-indicators [data-bs-target]::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-border-color);
+}
+
+.technology-carousel .carousel-indicators [data-bs-target]::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: 0.3s ease;
+}
+
+.technology-carousel .carousel-indicators [data-bs-target]:hover::after,
+.technology-carousel .carousel-indicators .active::after {
+    transform: scaleX(1);
+}
+
+.technology-card,
+.services-card {
+    height: 100%;
+}
+
+.technology-card {
+    transition: 0.3s;
+}
+
+.technology-card:hover {
+    box-shadow:
+        0 20px 25px -5px #0000001a,
+        0 8px 10px -6px #0000001a;
+    transform: translateY(-10px);
+}
+
+.react-card {
+    background-color: #E5F0FF;
+}
+
+.react-icon {
+    background-color: #2B7FFF;
+}
+
+.react-learn {
+    background-color: #DBEAFE;
+    color: #193CB8;
+}
+
+.next-card {
+    background-color: #F6F7F9;
+}
+
+.next-icon {
+    background-color: #000;
+}
+
+.next-learn {
+    background-color: #F3F4F6;
+    color: #1E2939;
+}
+
+.vue-card {
+    background-color: #E9FDEF;
+}
+
+.vue-icon {
+    background-color: #00C950;
+}
+
+.vue-learn {
+    background-color: #DBFCE7;
+    color: #016630;
+}
+
+.angular-card {
+    background-color: #FFF3E2;
+}
+
+.angular-icon {
+    background-color: #FF6900;
+}
+
+.angular-learn {
+    background-color: #FFEDD4;
+    color: var(--dark-main-color);
+}
+
+.css-card {
+    background-color: #E1FDFF;
+}
+
+.css-icon {
+    background-color: #00B8DB;
+}
+
+.css-learn {
+    background-color: #CEFAFE;
+    color: #02617A;
+}
+
+.vite-card {
+    background-color: #F8F1FF;
+}
+
+.vite-icon {
+    background-color: #AD46FF;
+}
+
+.vite-learn {
+    background-color: #F3E8FF;
+    color: #6E11B0;
+}
+
+.go-card {
+    background-color: #FEECEC;
+}
+
+.go-icon {
+    background-color: #E7000B;
+}
+
+.go-learn {
+    background-color: #FFE2E2;
+    color: #9F0712;
+}
+
+.net-card {
+    background-color: #E8EEFF;
+}
+
+.net-icon {
+    background-color: #4F39F6;
+}
+
+.net-learn {
+    background-color: #E0E7FF;
+    color: #372AAC;
+}
+.ruby-card {
+    background-color: #E3FDF7;
+}
+
+.ruby-icon {
+    background-color: #009689;
+}
+
+.ruby-learn {
+    background-color: #CBFBF1;
+    color: #005F5A;
+}
+
+.apple-icon {
+    background-color: #364153;
+}
+
+.sql-card {
+    background-color: #FEFAD7;
+}
+
+.sql-icon {
+    background-color: #D08700;
+}
+
+.sql-learn {
+    background-color: #FEF9C2;
+    color: #894B00;
+}
+
 /* end Technology Stack */
 
 
 /* start  Client Testimonials */
 
+.client-testimonials {
+    padding-block: 96px;
+    background: linear-gradient(to bottom right,
+            var(--light-bg),
+            var(--main-background-color),
+            var(--light-bg));
+}
+
+.testimonial-card {
+    background: linear-gradient(to bottom right,
+            color-mix(in oklab, var(--min-gray) 50%, transparent),
+            color-mix(in oklab, var(--main-color) 50%, transparent));
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12),
+        0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.testimonial-card:hover {
+    background: linear-gradient(to bottom right,
+            var(--light-bg),
+            var(--main-background-color),
+            var(--light-bg));
+}
+
+.testimonial-card:hover .rating-icon {
+    transform: scale(1.1);
+}
+
+.rating-icon {
+    color: var(--main-color);
+    background-color: var(--orange-color);
+}
+
+.stars-icons {
+    color: var(--yellow-color);
+}
+
+.rate {
+    color: var(--light-gray);
+}
+
+.testimonial-p {
+    color: var(--gray-color);
+    position: relative;
+}
+
+.h-line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--main-border-color);
+}
+
+.person-photo {
+    width: 80px;
+    height: 80px;
+    padding: 1.5px;
+    border: 2px solid var(--orange-border);
+    position: relative;
+}
+
+.person-photo::after {
+    content: "\f00c";
+    font-family: "Font Awesome 7 Free";
+    font-weight: 900;
+    font-size: 12px;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    bottom: -2px;
+    right: -2px;
+    border: 2px solid var(--main-background-color);
+    color: var(--main-background-color);
+    background: linear-gradient(to bottom right,
+            var(--main-color),
+            var(--sub-color));
+}
+
+.person-name {
+    color: var(--dark-main-color);
+}
+
+.career {
+    color: var(--gray-color);
+}
+
+.linkedin {
+    color: var(--main-color);
+}
+
+.v-on-ln,
+.right-text {
+    color: var(--mid-gray);
+}
+
+
+.testimonials-indicators {
+    position: static;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 5px;
+}
+
+
+.carousel-indicators-container .testimonials-indicators button {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50%;
+    background-color: var(--mid-gray) !important;
+    transition: 0.3s !important;
+    display: inline-block !important;
+    flex: 0 0 auto;
+    border-width: 0px 0px;
+}
+
+
+.carousel-indicators-container .testimonials-indicators .active {
+    background-color: var(--main-color) !important;
+}
+
+.carousel-indicators-container .testimonials-indicators button:hover {
+    width: 32px !important;
+    border-radius: 999px !important;
+    background-color: rgba(234, 88, 12, 0.5) !important;
+}
+
+.carousel-inner {
+    padding: 40px 0;
+}
+
 /* end  Client Testimonials */
 
 
 /* start FAQ */
+
+.faq {
+    padding-block: 96px;
+}
+
+.accordion-list {
+    overflow: hidden;
+    border: 1px solid var(--main-border-color);
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+
+.accordion-item:not(:first-of-type) {
+    border-top: 1px solid var(--main-border-color);
+    transition: 0.3s;
+}
+
+.accordion-list:hover,
+.accordion-item:not(:first-of-type):hover {
+    border-color: var(--orange-border);
+}
+
+.accordion-button {
+    color: var(--dark-main-color);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #F9FAFB;
+    color: var(--dark-main-color);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: none;
+}
+
+.accordion-button::after {
+    background-image: none;
+    content: "\f078";
+    font-family: "Font Awesome 7 Free";
+    font-weight: 900;
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #F6E9E3;
+    color: var(--main-color);
+    width: 40px;
+    height: 40px;
+    
+}
+
+.accordion-p {
+    color: var(--gray-color);
+}
+
 
 /* end FAQ */
 
