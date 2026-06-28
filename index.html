@@ -1422,26 +1422,33 @@
                                 <div class="interest mb-4 col-12 d-flex flex-column">
                                     <label class="mb-2 fs-xs fw-bold gray-color" for="uInterest">Primary
                                         Interest</label>
-                                    <select class="rounded-4 p-3  mb-2" name="u-interest" id="uInterest">
-                                        <option value="choose-area">Choose your focus area</option>
-                                        <option value="web-dev-design">Web Development & Design</option>
-                                        <option value="mobile-app-dev">Mobile App Development</option>
-                                        <option value="cloud-infrastructure">Cloud & Infrastructure</option>
-                                        <option value="machine-learning">AI & Machine Learning</option>
-                                        <option value="digital-marketing">Digital Marketing & SEO</option>
-                                        <option value="digital-transformation">Complete Digital Transformation</option>
-                                    </select>
+                                    <div class="select-wrapper">
+                                        <select class="rounded-4 p-3  mb-2" name="u-interest" id="uInterest">
+                                            <option value="choose-area">Choose your focus area</option>
+                                            <option value="web-dev-design">Web Development & Design</option>
+                                            <option value="mobile-app-dev">Mobile App Development</option>
+                                            <option value="cloud-infrastructure">Cloud & Infrastructure</option>
+                                            <option value="machine-learning">AI & Machine Learning</option>
+                                            <option value="digital-marketing">Digital Marketing & SEO</option>
+                                            <option value="digital-transformation">Complete Digital Transformation
+                                            </option>
+                                        </select>
+                                        <i class="fa-solid fa-chevron-down select-icon"></i>
+                                    </div>
                                 </div>
                                 <div class="interest mb-4 col-12 d-flex flex-column">
                                     <label class="mb-2 fs-xs fw-bold gray-color" for="uInterest">Timeline</label>
-                                    <select class="rounded-4 p-3 mb-2" name="u-interest" id="uInterest">
-                                        <option value="when-you-want-start">When do you want to start?</option>
-                                        <option value="immediately">Immediately</option>
-                                        <option value="within-one-month">Within 1 month</option>
-                                        <option value="within-three-month">Within 3 months</option>
-                                        <option value="within-six-month">Within 6 months</option>
-                                        <option value="just-exploring">Just exploring options</option>
-                                    </select>
+                                    <div class="select-wrapper">
+                                        <select class="rounded-4 p-3 mb-2" name="u-interest" id="uInterest">
+                                            <option value="when-you-want-start">When do you want to start?</option>
+                                            <option value="immediately">Immediately</option>
+                                            <option value="within-one-month">Within 1 month</option>
+                                            <option value="within-three-month">Within 3 months</option>
+                                            <option value="within-six-month">Within 6 months</option>
+                                            <option value="just-exploring">Just exploring options</option>
+                                        </select>
+                                        <i class="fa-solid fa-chevron-down select-icon"></i>
+                                    </div>
                                 </div>
                                 <div class="budget row mb-4">
                                     <input type="radio" name="budget" id="budget1" hidden checked>
@@ -1559,8 +1566,50 @@
 
     <!-- start footer  -->
 
-    <footer class="">
-
+    <footer>
+        <div class="main-container container py-1 py-xl-2 px-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-top d-flex flex-md-row flex-column align-items-center justify-content-between">
+                        <div class="footer-left">
+                            <div class="logo-container mb-3 d-flex align-items-center">
+                                <i
+                                    class="logo-icon fa-solid fa-cube main-linear-back-color rounded-4 me-2 d-flex align-items-center justify-content-center"></i>
+                                <span class="brand-name me-1 fw-bold fs-lg">Clarity</span>
+                            </div>
+                            <p class="top-p fs-xs gray-color">Transforming businesses through innovative digital
+                                solutions and cutting-edge technology.
+                            </p>
+                        </div>
+                        <div class="footer-right d-flex">
+                            <div class="footer-icon">
+                                <a class="text-decoration-none" href="https://www.linkedin.com/"><i
+                                        class="fa-brands fa-linkedin rounded-3 me-2 d-flex align-items-center justify-content-center"></i></a>
+                            </div>
+                            <div class="footer-icon">
+                                <a class="text-decoration-none" href="https://x.com/"><i
+                                        class="fa-brands fa-twitter rounded-3 me-2 d-flex align-items-center justify-content-center"></i></a>
+                            </div>
+                            <div class="footer-icon">
+                                <a class="text-decoration-none" href="https://github.com/"><i
+                                        class="fa-brands fa-github rounded-3 me-2 d-flex align-items-center justify-content-center"></i></a>
+                            </div>
+                            <div class="footer-icon">
+                                <a class="text-decoration-none" href="https://dribbble.com/"><i
+                                        class="fa-brands fa-dribbble rounded-3 me-2 d-flex align-items-center justify-content-center"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="footer-bottom text-center">
+                        <p class="fs-sm gray-color m-0 mb-2">© 2025 Clarity. All rights reserved.</p>
+                        <p class="made-with fs-xs m-0">Made with <i class="fa-solid fa-heart fa-sm"></i> for amazing
+                            experiences</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- end footer  -->
