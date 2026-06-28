@@ -86,6 +86,13 @@ body {
             var(--light-color));
 }
 
+.light-linear-back-color-right {
+    background: linear-gradient(to right,
+            var(--main-color),
+            var(--sub-color),
+            var(--light-color));
+}
+
 .fs-xs {
     font-size: var(--fs-xs);
 }
@@ -124,6 +131,10 @@ body {
 
 .our-shadow:hover {
     box-shadow: 0 10px 25px var(--main-shadow);
+}
+
+.gray-color {
+    color: var(--gray-color);
 }
 
 /* end globle feature */
@@ -652,6 +663,7 @@ header {
     background-color: #E0E7FF;
     color: #372AAC;
 }
+
 .ruby-card {
     background-color: #E3FDF7;
 }
@@ -881,7 +893,7 @@ header {
     color: var(--main-color);
     width: 40px;
     height: 40px;
-    
+
 }
 
 .accordion-p {
@@ -894,10 +906,142 @@ header {
 
 /* start contact us */
 
+.contact-us {
+    padding-block: 84px;
+    background: linear-gradient(to bottom right,
+            var(--light-bg),
+            var(--main-background-color),
+            var(--light-bg));
+}
+
+.form form input,
+.form form select,
+textarea {
+    background-color: #F3F4F6;
+    border: 2px solid transparent;
+    outline: 3px solid transparent;
+    transition: 0.3s;
+}
+
+.form form input:focus,
+.form form select:focus,
+textarea:focus {
+    border-color: var(--main-color);
+    outline-color: var(--orange-border);
+    transform: translateY(-2px);
+}
+
+.form form textarea {
+    resize: none;
+    min-height: 155px;
+    max-height: 160px;
+}
+
+.budget-card {
+    cursor: pointer;
+}
+
+.budget-card-container {
+    border: 2px solid #e5e7eb80;
+    background: var(--main-background-color);
+    transition: 0.3s;
+}
+
+.budget-card:hover .budget-card-container {
+    border-color: var(--main-border-color);
+}
+
+input[type="radio"]:checked+.budget-card .budget-card-container {
+    border-color: var(--main-color);
+    background: var(--light-bg);
+}
+
+input[type="radio"]:checked+.budget-card .budget-value {
+    color: var(--main-color);
+}
+
+.subscribe a {
+    color: var(--main-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.subscribe a:hover {
+    text-decoration: underline;
+}
+
+.subscribe input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--main-color);
+    transition: 0.3s;
+}
+
+
+.free-consultation {
+    color: var(--main-background-color);
+    transition: 0.3s;
+}
+
+.free-consultation:hover {
+    transform: translateY(-6px);
+}
+
+.free-consultation i {
+    transition: 0.3s;
+}
+
+.free-consultation:hover i {
+    transform: translateX(6px);
+}
+
+.contact-container {
+     border-radius: 30px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.why-choose-value i {
+    background-color: #CB6B3B;
+}
+
+.why-choose h4,
+.why-choose h5,
+.direct-contact i,
+.direct-contact h5 {
+    color: var(--main-background-color);
+}
+
+.why-choose p {
+    color: #F2DACE;
+}
+
+.direct-text {
+    color: #F8E8E2;
+}
+
+.contact-form {
+    background-color: var(--main-background-color);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.why-us {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.hr {
+    width: 100%;
+    height: 0.1px;
+    background-color: var(--main-color);
+}
+
 /* end contact us */
 
 
 /* start footer */
+
 
 /* end footer */
 
@@ -948,6 +1092,19 @@ header {
         width: 84px;
         height: 84px;
     }
+
+    .contact-form {
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-top-right-radius: 0px;
+    }
+
+    .why-us {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+
 }
 
 /* xl */
@@ -967,18 +1124,25 @@ header {
         max-width: 100%;
     }
 
-    .hero-image-container {
-        width: 415px;
-        height: 415px;
+    #header .navbar-nav .nav-link {
+        position: relative;
     }
 
-    #header .navbar-nav .nav-link.active:before {
+    #header .navbar-nav .nav-link::before {
         content: "";
         position: absolute;
         height: 2px;
         width: calc(100% - 16px);
+        left: 8px;
         bottom: 4px;
         background-color: var(--sub-color);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: 0.3s;
+    }
+
+    #header .navbar-nav .nav-link.active::before {
+        transform: scaleX(1);
     }
 
     .dropdown-menu {
